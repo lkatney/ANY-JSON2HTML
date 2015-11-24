@@ -2,6 +2,7 @@ var lastPos = 0;
 var lastPosVertical = 0;
 
 function startProcessing(){
+    $('#DynamicGrid').empty();
     $('error').hide();
     var jsonString = $('textarea#input').val();
 
