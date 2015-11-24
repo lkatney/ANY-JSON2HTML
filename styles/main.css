@@ -19,3 +19,4 @@ div#left{position: fixed; left: 15px;top: 10px;}
 a span{font-size: 15px;display: block;margin: 4px 0;}
 
 description{position: relative; top: 70px; display: block; font-size: 21px; color: #847bba}
+error{display: none;position: relative;top: 90px; color: #ed6d64;font-size: 18px;}

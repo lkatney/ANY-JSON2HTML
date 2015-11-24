@@ -2,10 +2,24 @@ var lastPos = 0;
 var lastPosVertical = 0;
 
 function startProcessing(){
+    $('error').hide();
     var jsonString = $('textarea#input').val();
-    var json = JSON.parse(jsonString);
 
-    $('#DynamicGrid').append(CreateView(json, "lightPro", true)).fadeIn();
+    try{
+        var json = JSON.parse(jsonString);
+    }catch(err){
+        console.log(err);
+        $('error').show();
+        $('error').text('Invalid JSON');
+    }
+
+    try{
+        $('#DynamicGrid').append(CreateView(json, "lightPro", true)).fadeIn();
+    }catch(err){
+        console.log(err);
+        $('error').show();
+        $('error').text('Error while creating table!');
+    }
 
     $( ".scrollable" ).mouseenter(function() {
         lastPos = 0;
