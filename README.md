@@ -23,7 +23,7 @@ Include below css as follows
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
 ```
 
-That's it you are good to go. just call #### CreateView
+That's it you are good to go. just call **CreateView** and append it to any div
 
 ```
 $('#results').append(CreateView(json, "lightPro", true)).fadeIn();
